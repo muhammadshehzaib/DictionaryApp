@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/f8db7d9584.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="output.css" />
+
+    <title>Frontend Mentor | Notifications page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="landing-page bg-[#e5effa]">
+      <div class="container mx-auto max-w-3xl px-5 mt-2 bg-white">
+        <div class="nav mb-6">
+          <ul class="flex justify-between">
+            <li class="text-lg font-bold">
+              Notifications
+              <span
+                class="bg-[#093281] text-white p-1 px-3 rounded-md ml-2 text-base"
+                id="notification"
+                >3</span
+              >
+            </li>
+            <li
+              class="text-gray-500 font-medium"
+              onclick="markRead()"
+              id="markread"
+            >
+              <a href="">Mark all as read</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="notifications">
+          <ul id="notificationbar"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

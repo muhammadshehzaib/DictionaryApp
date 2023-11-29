@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container bg-lightgrey min-h-screen flex justify-center items-center mx-auto max-w-full px-2"
+    >
+      <div
+        class="bg-white p-8 m-4 rounded-br-[120px] rounded-xl min-h-[45vh] max-w-full mr-5"
+      >
+        <form class="flex flex-col items-center gap-6">
+          <div class="flex gap-2 vsm:gap-6">
+            <div class="">
+              <p class="uppercase text-[#716F6F] mb-1 font-bold" for="days">
+                Day
+              </p>
+              <input
+                type="number"
+                class="days border-2 w-20 vsm:w-32 border-lightgrey text-lg vsm:text-3xl rounded-xl font-bold pl-4 mb-2 focus:border-Purple focus:outline-none px-4 py-1"
+                required
+                placeholder="DD"
+                type="number"
+                name="days"
+                id="days"
+                oninput="validateInput(this)"
+              />
+              <p class="text-red-800 text-xs invisible" id="dayError">
+                Days not valid
+              </p>
+            </div>
+            <div class="flex flex-col">
+              <p class="uppercase text-[#716F6F] mb-1 font-bold" for="month">
+                Month
+              </p>
+              <input
+                type="number"
+                class="month border-2 w-20 vsm:w-32 border-lightgrey text-lg vsm:text-3xl rounded-xl font-bold pl-4 mb-2 focus:border-Purple focus:outline-none px-4 py-1"
+                required
+                placeholder="MM"
+                type="number"
+                name="month"
+                id="months"
+                oninput="validateInput(this)"
+              />
+              <p class="text-red-800 text-xs invisible" id="monthError">
+                Months not valid
+              </p>
+            </div>
+            <div class="flex flex-col">
+              <p class="uppercase text-[#716F6F] mb-1 font-bold" for="years">
+                Year
+              </p>
+              <input
+                class="years border-2 w-20 vsm:w-32 border-lightgrey text-lg vsm:text-3xl rounded-xl font-bold pl-4 mb-2 focus:border-Purple focus:outline-none px-4 py-1"
+                required
+                placeholder="YYYY"
+                type="number"
+                name="years"
+                id="years"
+                oninput="validateInput(this)"
+              />
+              <p class="text-red-800 text-xs invisible" id="yearError">
+                Year not valid
+              </p>
+            </div>
+          </div>
+          <button
+            id="arrowBtn"
+            type="submit"
+            class="relative w-full flex justify-center vsm:justify-end"
+          >
+            <hr class="w-full border-t border-gray-300 absolute" />
+
+            <img
+              src="../assets/images/icon-arrow.svg"
+              class="bg-Purple h-14 w-14 rounded-full p-3 -translate-y-1/2 transform top-8 right-0"
+              alt=""
+            />
+          </button>
+        </form>
+        <div class="italic vsm:text-5xl font-extrabold mt-5 text-4xl">
+          <p>
+            <span class="text-Purple mr-1 font-black" id="ageYears">- - </span
+            >years
+          </p>
+          <p><span class="text-Purple mr-1" id="ageMonths">- - </span>months</p>
+          <p><span class="text-Purple mr-2" id="ageDays">- -</span>days</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="app.js"></script>
+  </body>
+</html>

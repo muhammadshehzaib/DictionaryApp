@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body class="">
+    <div class="landing-page">
+      <div
+        class="contianer min-h-screen max-w-full bg-[#ff7a7a] md:bg-[url('./images/bg-intro-desktop.png')] bg-[url('./images/bg-intro-mobile.png')] flex justify-center items-center dark:bg-slate-900"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 w-[85%]">
+          <div
+            class="text flex justify-center items-center text-center md:pr-10 flex-col lg:items-start lg:text-left"
+          >
+            <h1
+              class="text-3xl text-white font-bold mb-5 lg:text-4xl lg:max-w-[300px] xl:text-5xl xl:max-w-[500px] xl:relative xl:bottom-8 left-4 min-h-[100px]"
+              id="typed-h1"
+            >
+              Learn to code by watching others
+            </h1>
+            <p class="text-white mb-10 lg:max-w-[425px] lg:text-2xl xl:ml-3">
+              See how experienced developers solve problems in
+              real-time.Watching scripted tutorials is great .but understanding
+              how developers think is invaluable
+            </p>
+            <div class="flex justify-center">
+              <img class="moon cursor-pointer" src="./images/moon.svg" />
+              <img class="sun cursor-pointer" src="./images/sun.svg" />
+            </div>
+          </div>
+
+          <div class="md:w-[90%] md:ml-11">
+            <button
+              class="text-white bg-[#6055A5] w-full px-4 py-2 mb-5 rounded-md xl:mt-36 dark:bg-[#38CC8C]"
+            >
+              <p class="max-w-[200px] mx-auto xl:max-w-[600px] lg:p-2">
+                Try it free 7 days then $20/mo. thereafter
+              </p>
+            </button>
+
+            <div class="bg-white p-6 rounded-md">
+              <form
+                class="flex flex-col bg-white"
+                onsubmit="return validateForm()"
+              >
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  required
+                  class="border-2 mt-8 mb-4 p-4 rounded-md"
+                  placeholder="First Name"
+                />
+
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  required
+                  class="border-2 my-4 p-4 rounded-md"
+                  placeholder="Last Name"
+                />
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="border-2 my-4 p-4 rounded-md"
+                  placeholder="email"
+                />
+
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  class="border-2 mt-4 mb-8 p-4 rounded-md"
+                  placeholder="password"
+                />
+
+                <button
+                  type="submit"
+                  class="bg-[#38CC8C] text-white rounded-md p-4 uppercase font-semibold mx-5 dark:bg-[#6055A5]"
+                >
+                  <p>Calm your free trial</p>
+                </button>
+                <p
+                  class="text-base max-w-[240px] mx-auto pt-3 text-[#B9B6D3] lg:max-w-[80%]"
+                >
+                  By clicking the button you are agreeging to our
+                  <span class="text-[#ff7a7a]">Terms and Services</span>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

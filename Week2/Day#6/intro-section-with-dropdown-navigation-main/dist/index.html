@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="bg-almostWhite">
+    <div class="landing-page">
+      <div class="container m-auto">
+        <nav
+          class="border-gray-200 flex py-6 items-center px-12 relative overflow-hidden"
+        >
+          <div class="flex cursor-pointer items-center w-full">
+            <div class="mt-1"><img src="../images/logo.svg" alt="" /></div>
+
+            <div
+              class="nav-links md:static md:min-h-fit md:ml-7 lg:ml-12 lg:text-lg text-mediumGray fixed min-h-[60vh] top-0 right-[-100%] w-full flex items-center duration-500 bg-white md:bg-transparent justify-between font-bold max-md:flex-col max-md:w-[60%] max-md:h-screen"
+            >
+              <ul
+                class="flex md:flex-row justify-between flex-col md:items-center md:gap-4 gap-8 max-md:mt-20"
+              >
+                <li
+                  class="md:pr-4 lg:pr-8 flex flex-row items-center"
+                  onmouseenter="Featuresdropdown()"
+                  id="featuresdropdown"
+                >
+                  Features
+                  <div class="ml-2 mt-1">
+                    <img src="../images/icon-arrow-down.svg" alt="" />
+                  </div>
+
+                  <div
+                    class="fixed hidden top-[60px] w-44 bg-almostWhite border-2 rounded-lg"
+                    id="features"
+                  >
+                    <ul>
+                      <li class="flex ml-3 my-3">
+                        <img src="../images/icon-todo.svg" alt="" />
+                        <a href="" class="ml-3">Todo List</a>
+                      </li>
+                      <li class="flex ml-3 my-3">
+                        <img src="../images/icon-calendar.svg" alt="" />
+                        <a href="" class="ml-3">Calanders</a>
+                      </li>
+                      <li class="flex ml-3 my-3">
+                        <img src=".././images/icon-reminders.svg" alt="" />
+                        <a href="" class="ml-3">Reminders</a>
+                      </li>
+                      <li class="flex ml-3 my-3">
+                        <img src=".././images/icon-planning.svg" alt="" />
+                        <a href="" class="ml-3">Planning</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li
+                  class="md:pr-4 lg:pr-8 flex flex-row items-center"
+                  onmouseenter="Companydropdown()"
+                  id="companydropdown"
+                >
+                  Company
+                  <div
+                    class="fixed hidden top-[60px] w-44 bg-almostWhite border-2 rounded-lg"
+                    id="company"
+                  >
+                    <ul>
+                      <li class="flex ml-3 my-3">
+                        <a href="" class="ml-3">Histroy</a>
+                      </li>
+                      <li class="flex ml-3 my-3">
+                        <a href="" class="ml-3">Our Team</a>
+                      </li>
+                      <li class="flex ml-3 my-3">
+                        <a href="" class="ml-3">Blogs</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="ml-2 mt-1">
+                    <img src="../images/icon-arrow-down.svg" alt="" />
+                  </div>
+                </li>
+                <li class="md:pr-4 lg:pr-8">Careers</li>
+                <li class="md:pr-4 lg:pr-8">About</li>
+              </ul>
+              <div
+                class="flex items-center justify-between max-md:justify-evenly max-md:flex-col max-md:h-[25vh] max-md:w-full"
+              >
+                <li class="list-none"><button class="mr-5">Login</button></li>
+                <li class="list-none max-md:w-full mx-5">
+                  <button
+                    class="border-2 px-5 py-1.5 border-almostBlack rounded-2xl max-md:w-full"
+                  >
+                    Register
+                  </button>
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer md:hidden"
+          ></ion-icon>
+        </nav>
+
+        <div class="flex mt-10 justify-around flex-col mr-5">
+          <div class="md:flex">
+            <div class="flex flex-row order-1">
+              <div
+                class="md:max-w-[350px] hidden md:block lg:max-w-[450px] xl:max-w-[550px] xl:mr-28"
+              >
+                <img src="../images/image-hero-desktop.png" alt="" srcset="" />
+              </div>
+              <div class="block md:hidden">
+                <img src="../images/image-hero-mobile.png" alt="" />
+              </div>
+            </div>
+            <div class="flex flex-col gap-12 max-w-lg mx-auto md:my-auto">
+              <div class="flex flex-col gap-8 text-center lg:text-left">
+                <h1
+                  class="font-bold text-[2.50rem] mt-8 max-w-lg lg:max-w-[24.5rem] lg:text-[4rem] leading-tight"
+                >
+                  Make remote work
+                </h1>
+                <p
+                  class="text-lg text-mediumGray font-bold lg:max-w-[25rem] md:max-w-[23rem] md:mx-auto lg:mx-0"
+                >
+                  Get your team in sync, no matter your location. Streamline
+                  processes, create team rituals, and watch productivity soar.
+                </p>
+              </div>
+              <div class="mx-auto lg:mx-0">
+                <button
+                  class="text-white bg-almostBlack py-3 px-8 rounded-xl font-bold"
+                >
+                  Learn More
+                </button>
+              </div>
+              <div class="mx-3">
+                <ul class="flex mt-12 justify-between">
+                  <li class="mr-6">
+                    <img src="../images/client-databiz.svg" alt="" />
+                  </li>
+                  <li class="mr-6">
+                    <img src="../images/client-audiophile.svg" alt="" />
+                  </li>
+                  <li class="mr-6">
+                    <img src="../images/client-meet.svg" alt="" />
+                  </li>
+                  <li class="mr-6">
+                    <img src="../images/client-maker.svg" alt="" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="app.js"></script> -->
+    <script src="./app.js"></script>
+  </body>
+</html>

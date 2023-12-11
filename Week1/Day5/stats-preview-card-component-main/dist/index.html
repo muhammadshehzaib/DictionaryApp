@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="landin-page bg-myblack">
+      <div
+        class="container w-full min-h-screen flex justify-center items-center sm:mx-auto"
+      >
+        <div class="grid md:grid-cols-2 grid-cols-1 w-[85%]">
+          <div
+            class="bg-mypurple text-white md:order-0 p-12 md:p-8 lg:p-12 flex flex-col justify-center items-center text-center lg:text-left"
+          >
+            <h1
+              class="font-inter font-bold md:text-2xl tracking-wide leading-11 mb-4 max-w-md text-2xl xl:text-4xl xl:max-w-lg"
+            >
+              Get <span class="text-textcolor">insights</span> that help your
+              business grow.
+            </h1>
+            <p class="opacity-75 mb-9 md:text-lg max-w-lg xl:text-2xl">
+              Discover the benefits of data analytics and make better decisions
+              regarding revenue, customer experience, and overall efficiency.
+            </p>
+
+            <div class="lg:w-full mt-5 2xl:w-[93%]">
+              <ul
+                class="flex gap-12 font-inter font-semibold text-2xl flex-col sm:flex-row items-center md:gap-6 lg:place-items-start lg:gap-14"
+              >
+                <li class="text-center">
+                  <p id="countUpCompanies" class="xl:text-3xl text:xl">0</p>
+                  <div
+                    class="font-lexend-deca text-xs tracking-wider opacity-60 uppercase mt-2"
+                  >
+                    companies
+                  </div>
+                </li>
+                <li class="text-center">
+                  <p id="countUpTemplates" class="xl:text-3xl text:xl">0</p>
+                  <div
+                    class="font-lexend-deca text-xs tracking-wider opacity-60 uppercase mt-2"
+                  >
+                    templates
+                  </div>
+                </li>
+
+                <li class="text-center flex flex-col">
+                  <p id="countUpQueries" class="xl:text-3xl text:xl">0</p>
+                  <div
+                    class="font-lexend-deca text-xs tracking-wider opacity-60 uppercase mt-2"
+                  >
+                    queries
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:order-none -order-1 relative">
+            <div class="w-full h-full absolute top-0 bg-purple-600/60"></div>
+            <img
+              src="../images/image-header-desktop.jpg"
+              class="min-h-full w-full"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- <link rel="stylesheet" href="Grid_System_Button.css"> -->
+    <title>Grid System</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Updated sidebar structure with hamburger icon -->
+      <nav>
+        <div class="nav">Navbar</div>
+        <div>
+          <div class="topnav">
+            <div id="myLinks">
+              <a id="neutral" onclick="changeColorCool()">Neutral</a>
+              <a id="modern" onclick="changeColorCrispy()">Modern</a>
+              <a id="dark" onclick="changeColorDark()">Dark</a>
+              <a id="crispy" onclick="changeColorNeutral()">Crispy</a>
+              <a id="cool" onclick="changeColorFlex()">Cool</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div id="sidebar" class="sidebar">
+        <div class="btn-group">
+          <button class="button" onclick="changeColorCool()">Cool</button>
+          <button class="button" onclick="changeColorCrispy()">Crispy</button>
+          <button class="button" onclick="changeColorDark()">Dark</button>
+          <button class="button" onclick="changeColorModern()">Modern</button>
+          <button class="button" onclick="changeColorNeutral()">Neutral</button>
+          <button class="button" onclick="changeColorFlex()">Flex</button>
+        </div>
+      </div>
+
+      <!-- Your existing content -->
+      <nav>Navbar</nav>
+      <main>Cool</main>
+      <div id="content1">Content1</div>
+      <div id="content2">Content2</div>
+      <div id="content3">Content3</div>
+      <footer>Footer</footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 const notificationArray = [
   {
-    image: "../assets/images/avatar-mark-webber.webp",
+    image: "./images/avatar-mark-webber.webp",
     name: "Mark Webber",
     reaction: "reacted to your recent post",
     message: "My first tournament today!",
@@ -12,7 +12,7 @@ const notificationArray = [
     unread: true,
   },
   {
-    image: "../assets/images/avatar-angela-gray.webp",
+    image: "./images/avatar-angela-gray.webp",
     name: "Angela Gray",
     reaction: "followed you",
     message: "",
@@ -24,7 +24,7 @@ const notificationArray = [
     unread: true,
   },
   {
-    image: "../assets/images/avatar-jacob-thompson.webp",
+    image: "./images/avatar-jacob-thompson.webp",
     name: "Jacob Thompson",
     reaction: "has joined your group",
     message: "",
@@ -36,7 +36,7 @@ const notificationArray = [
     unread: true,
   },
   {
-    image: "../assets/images/avatar-rizky-hasanuddin.webp",
+    image: "./images/avatar-rizky-hasanuddin.webp",
     name: "Rizky Hasanuddin",
     reaction: "sent you a private message",
     message: "",
@@ -49,7 +49,7 @@ const notificationArray = [
     unread: false,
   },
   {
-    image: "../assets/images/avatar-kimberly-smith.webp",
+    image: "./images/avatar-kimberly-smith.webp",
     name: "Kimberly Smith",
     reaction: "commented on your picture",
     message: "",
@@ -61,7 +61,7 @@ const notificationArray = [
     unread: false,
   },
   {
-    image: "../assets/images/avatar-nathan-peterson.webp",
+    image: "./images/avatar-nathan-peterson.webp",
     name: "Nathan Peterson",
     reaction: "reacted to your recent post",
     message: " 5 end-game strategies to increase your win rate",
@@ -73,7 +73,7 @@ const notificationArray = [
     unread: false,
   },
   {
-    image: "../assets/images/avatar-anna-kim.webp",
+    image: "./images/avatar-anna-kim.webp",
     name: "Anna Kim",
     reaction: "left the group",
     message: "",
@@ -148,3 +148,52 @@ document.getElementById("markread").addEventListener("click", function (e) {
   }
   var active_dot = (document.getElementById("notification").innerHTML = "0");
 });
+
+//Icons
+const sunIcon = document.querySelector(".sun");
+const moonIcon = document.querySelector(".moon");
+
+//Theme Vars
+const userTheme = localStorage.getItem("theme");
+const systemTheme = window.matchMedia("(prefers-color-scheme:dark)").matches;
+
+//Icon toggling
+const iconToggle = () => {
+  moonIcon.classList.toggle("display-none");
+  sunIcon.classList.toggle("display-none");
+};
+
+//Initial Theme Check
+const themeCheck = () => {
+  if (userTheme === "dark" || (!userTheme && systemTheme)) {
+    document.documentElement.classList.add("dark");
+    moonIcon.classList.add("display-none");
+    return;
+  }
+  sunIcon.classList.add("display-none");
+};
+
+//Manual Theme Switch
+
+const themeSwitch = () => {
+  if (document.documentElement.classList.contains("dark")) {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+    iconToggle();
+    return;
+  }
+  document.documentElement.classList.add("dark");
+  localStorage.setItem("theme", "dark");
+  iconToggle();
+};
+
+//call theme switch on clicking buttons
+sunIcon.addEventListener("click", () => {
+  themeSwitch();
+});
+moonIcon.addEventListener("click", () => {
+  themeSwitch();
+});
+
+//invoke theme check on intial load
+themeCheck();

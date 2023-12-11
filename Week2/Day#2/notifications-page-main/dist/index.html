@@ -29,33 +29,148 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .notifications li {
+        animation: fadeIn 0.5s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .notifications li {
+        animation: fadeIn 0.5s ease-out;
+      }
+      @keyframes slideOut {
+        to {
+          max-height: 0;
+          opacity: 0;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      .notifications li {
+        animation: fadeIn 0.5s ease-out;
+      }
+
+      .notifications li:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transform: scale(1.02);
+      }
+
+      .remove_notification {
+        animation: slideOut 0.5s ease-out;
+      }
+
+      .sun,
+      .moon {
+        transition: transform 0.3s ease-out;
+        cursor: pointer;
+      }
+
+      .display-none {
+        display: none;
+      }
     </style>
   </head>
-  <body>
-    <div class="landing-page bg-[#e5effa]">
-      <div class="container mx-auto max-w-3xl px-5 mt-2 bg-white">
-        <div class="nav mb-6">
-          <ul class="flex justify-between">
-            <li class="text-lg font-bold">
-              Notifications
-              <span
-                class="bg-[#093281] text-white p-1 px-3 rounded-md ml-2 text-base"
-                id="notification"
-                >3</span
-              >
-            </li>
-            <li
-              class="text-gray-500 font-medium"
-              onclick="markRead()"
-              id="markread"
-            >
-              <a href="">Mark all as read</a>
-            </li>
-          </ul>
-        </div>
+  <body class="">
+    <div class="landing-page dark:bg-gray-900">
+      <nav class="bg-lightgrey border-gray-200 dark:bg-gray-900 bg-[#e5effa]">
+        <div class="flex items-center p-4 justify-around">
+          <span class="self-center text-2xl font-semibold dark:text-white"
+            >Notification Page</span
+          >
 
-        <div class="notifications">
-          <ul id="notificationbar"></ul>
+          <div class="md:block md:w-auto" id="navbar-default">
+            <ul
+              class="font-medium flex p-4 md:p-0 border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 items-center"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Contact</a
+                >
+              </li>
+              <div class="">
+                <img class="moon cursor-pointer" src="./images/moon.svg" />
+                <img class="sun cursor-pointer" src="./images/sun.svg" />
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="bg-[#e5effa] dark:bg-gray-900">
+        <div class="container mx-auto max-w-3xl px-5 bg-white h-full">
+          <div class="nav mb-6 pt-4">
+            <ul class="flex justify-between">
+              <li class="text-lg font-bold">
+                Notifications
+                <span
+                  class="bg-[#093281] text-white p-1 px-3 rounded-md ml-2 text-base notification-item"
+                  id="notification"
+                  >3</span
+                >
+              </li>
+              <li
+                class="text-gray-500 font-medium"
+                onclick="markRead()"
+                id="markread"
+              >
+                <a href="">Mark all as read</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="notifications">
+            <ul id="notificationbar"></ul>
+          </div>
         </div>
       </div>
     </div>

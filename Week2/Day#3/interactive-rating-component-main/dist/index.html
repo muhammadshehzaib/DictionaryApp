@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Rating state start -->
+    <div class="landing-page bg-[#141519]">
+      <div
+        class="container max-w-7xl mx-auto px-4 flex justify-center items-center h-screen"
+      >
+        <div class="bg-[#19202A] max-w-xl mx-auto rounded-2xl">
+          <div
+            class="p-6 flex flex-col justify-between h-[25rem] max-w-[450px] md:p-10"
+            id="firstsession"
+          >
+            <div
+              class="card-img bg-[#252D37] w-12 h-11 flex items-center justify-center rounded-full"
+            >
+              <img src="../images/icon-star.svg" alt="" />
+            </div>
+            <h1 class="text-white text-3xl font-semibold">How did we do?</h1>
+            <p class="text-[#959eac]">
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
+            <div>
+              <ul class="flex justify-between text-white w-[93%]">
+                <button
+                  class="bg-[#252D37] w-12 h-11 rounded-full flex items-center justify-center hover:bg-[#FB7413] focus:bg-[#959EAC] focus:outline-none cursor-pointer"
+                  onclick="getRating(1)"
+                >
+                  1
+                </button>
+                <button
+                  class="bg-[#252D37] w-12 h-11 rounded-full flex items-center justify-center hover:bg-[#FB7413] focus:bg-[#959EAC]"
+                  onclick="getRating(2)"
+                >
+                  2
+                </button>
+                <button
+                  class="bg-[#252D37] w-12 h-11 rounded-full flex items-center justify-center hover:bg-[#FB7413] focus:bg-[#959EAC]"
+                  onclick="getRating(3)"
+                >
+                  3
+                </button>
+                <button
+                  class="bg-[#252D37] w-12 h-11 rounded-full flex items-center justify-center hover:bg-[#FB7413] focus:bg-[#959EAC]"
+                  onclick="getRating(4)"
+                >
+                  4
+                </button>
+                <button
+                  class="bg-[#252D37] w-12 h-11 rounded-full flex items-center justify-center hover:bg-[#FB7413] focus:bg-[#959EAC]"
+                  onclick="getRating(5)"
+                >
+                  5
+                </button>
+              </ul>
+            </div>
+            <div>
+              <button
+                class="submit text-white bg-[#FB7413] w-full flex flex-col items-center h-10 rounded-3xl justify-center uppercase"
+                onclick="submitBtn()"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="p-6 flex flex-col justify-between h-[25rem] max-w-[450px] md:p-10 hidden"
+            id="thanku"
+          >
+            <div class="flex items-center justify-center">
+              <img
+                src="../images/illustration-thank-you.svg"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <p
+              class="bg-[#252D37] text-[#fb7413] text-xl font-bold flex justify-center w-[70%] mx-auto rounded-3xl p-2"
+            >
+              You selected&nbsp;<span id="rating"></span>&nbsp;out of 5
+            </p>
+            <h2 class="text-white text-3xl font-semibold flex justify-center">
+              Thank you!
+            </h2>
+            <p class="text-[#959eac] text-center">
+              We appreciate you taking the time to give a rating. If you ever
+              need more support, don't hesitate to get in touch!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+
+    <!-- You selected
+    <!-- Add rating here -->
+    <!-- out of 5 Thank you! We appreciate you taking the time to give a rating. If
+    you ever need more support, don’t hesitate to get in touch! -->
+
+    <!-- Thank you state end -->
+    <script src="app.js"></script>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

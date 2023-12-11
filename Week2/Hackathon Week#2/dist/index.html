@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <style>
+    .expandable-image {
+      max-width: 10%;
+      max-height: auto;
+      border-radius: 100px;
+    }
+
+    .expandable-image.expanded {
+      max-width: none;
+      width: 70%;
+      transition: all 0.5s ease-in-out, border-radius 0.5s ease in-out;
+    }
+  </style>
+  <body>
+    <div class="landing-page w-full">
+      <div class="container max-w-7xl mx-auto py-5 h-screen">
+        <div
+          class="flex h-screen justify-center relative md:flex-wrap"
+          id="imageContainer "
+        >
+          <img
+            src="./images/photo-1507525428034-b723cf961d3e.avif"
+            alt=""
+            class="max-w-[10%] max-h-auto mr-4 rounded-t-full rounded-b-full expandable-image"
+          />
+          <img
+            src="./images/photo-1549880338-65ddcdfd017b.avif"
+            alt=""
+            class="max-w-[10%] max-h-auto mr-4 rounded-t-full rounded-b-full expandable-image"
+          />
+
+          <img
+            src="./images/photo-1551009175-8a68da93d5f9.avif"
+            alt=""
+            class="max-w-[10%] max-h-auto mr-4 rounded-t-full rounded-b-full expandable-image"
+          />
+          <img
+            src="./images/photo-1558979158-65a1eaa08691.avif"
+            alt=""
+            class="max-w-[10%] max-h-auto mr-4 rounded-t-full rounded-b-full expandable-image"
+          />
+          <img
+            src="./images/photo-1572276596237-5db2c3e16c5d.avif"
+            alt=""
+            class="max-w-[10%] max-h-auto mr-4 rounded-t-full rounded-b-full expandable-image"
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const expandableImages = document.querySelectorAll(".expandable-image");
+
+        expandableImages.forEach((image) => {
+          image.addEventListener("click", function () {
+            expandableImages.forEach((otherImage) => {
+              if (
+                otherImage !== this &&
+                otherImage.classList.contains("expanded")
+              ) {
+                otherImage.classList.remove("expanded");
+                console.log("shehzaib");
+              }
+            });
+
+            this.classList.toggle("expanded");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
